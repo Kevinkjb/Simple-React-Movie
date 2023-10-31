@@ -5,7 +5,7 @@ import logo from "./search.png"
 import './App.css'
 
 
-const API_URL = 'http://www.omdbapi.com?apikey=4909c582'
+const API_URL = `http://www.omdbapi.com?apikey=${process.env.REACT_APP_API_KEY}`
 function App(){
   const [movies, setMovies] = useState([])
   const [searchTerm, setSearchTerm] = useState("")
@@ -13,7 +13,8 @@ function App(){
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json()
     setMovies(data.Search)
-    console.log(data)
+    console.log(process.env)
+
   }
   useEffect(()=>{
     searchMovies()

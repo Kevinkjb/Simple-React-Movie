@@ -1,5 +1,5 @@
 function MovieCard ({movie}){
-  console.log(movie.type)
+  console.log(movie)
   return(
     <div className="movie">
       <>
@@ -12,6 +12,7 @@ function MovieCard ({movie}){
         <div className="movie--info">
           <span>{movie.Type}</span>
           <h3>{movie.Title}</h3>
+          <p>{movie.Plot}</p>
         </div>
       </>
       
