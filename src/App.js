@@ -1,4 +1,4 @@
-
+import React from 'react'
 import MovieCard from './MovieCard'
 import { useEffect, useState } from "react";
 import logo from "./search.png"
@@ -13,7 +13,6 @@ function App(){
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json()
     setMovies(data.Search)
-    console.log(process.env)
 
   }
   useEffect(()=>{
