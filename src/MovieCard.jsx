@@ -9,7 +9,12 @@ function MovieCard ({movie}){
           <p>{movie.Year}</p>
         </div>
         <div className="movie--container">
-          <img className="movie--poster" src={movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/400"} alt={movie.Title}/>
+          <img className="movie--poster" 
+          src={
+            movie.Poster !== "N/A" ? 
+            movie.Poster : "https://via.placeholder.com/400"} 
+            alt={movie.Title}
+          />
         </div>
         <div className="movie--info">
           <span>{movie.Type}</span>

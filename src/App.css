@@ -77,7 +77,7 @@ body{
 }
 
 .movie--poster{
-  width: 100%;
+  width: 20rem;
   height: 30rem;
   cursor: pointer;
   transition: all 0.3s;
@@ -93,7 +93,6 @@ body{
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  padding: 2rem;
 }
 
 /* FOOTER SECTION */

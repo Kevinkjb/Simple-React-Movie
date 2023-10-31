@@ -12,7 +12,7 @@ function App(){
   const searchMovies = async (title) =>{
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json()
-    setMovies(data.Search)
+    setMovies(data.Search )
 
   }
   useEffect(()=>{
@@ -24,6 +24,9 @@ const handleKeyDown = (event) =>{
     setSearchTerm("")
   }
 }
+const SearchEvent = (e) =>{
+  setSearchTerm(e.target.value)
+}
   return(
     <>
       <div className="app">
@@ -31,10 +34,12 @@ const handleKeyDown = (event) =>{
         <h1>Movie Search</h1>
         <div class="search">
           <input className='input' placeholder="Search for movies" 
-          value={searchTerm} onChange={(e)=> setSearchTerm(e.target.value)}
+          value={searchTerm} onChange={SearchEvent}
           onKeyDown={handleKeyDown}
           />
-          <img className="logo" src={logo} alt="search" onClick={()=>searchMovies(searchTerm)}/>
+          <img className="logo" src={logo} alt="search" 
+          onClick={()=>searchMovies(searchTerm)}
+          />
         </div> 
       </div>
         {movies?.length > 0 ?(
