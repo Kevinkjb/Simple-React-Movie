@@ -5,7 +5,7 @@ import logo from "./search.png"
 import './App.css'
 
 
-const API_URL = 'http://www.omdbapi.com?apikey=403c8022'
+const API_URL = 'http://www.omdbapi.com?apikey=4909c582'
 function App(){
   const [movies, setMovies] = useState([])
   const [searchTerm, setSearchTerm] = useState("")
